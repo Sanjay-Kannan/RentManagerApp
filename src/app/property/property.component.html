@@ -1,0 +1,26 @@
+<h1 class="text-center">Rent Manager</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <p class="h2">Properties:</p>
+            <button type="button" class="btn btn-success float-end">Add Property</button>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <th>ID</th>
+        <th>Address</th>
+        <th>Bills</th>
+        <th>Misc</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of propertyList$|async">
+            <td>{{item.propertyId}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.bills}}</td>
+            <td>{{item.misc}}</td>
+        </tr>
+    </tbody>
+</table>
